@@ -1,0 +1,28 @@
+﻿<svg width="192" height="56" viewBox="0 0 192 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="10" y1="8" x2="182" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EA2D4"/>
+      <stop offset="1" stop-color="#335C8B"/>
+    </linearGradient>
+    <linearGradient id="line" x1="22" y1="16" x2="55" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#CDEBFF"/>
+    </linearGradient>
+    <filter id="softShadow" x="0" y="0" width="192" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#10253A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="6" y="6" width="180" height="44" rx="10" fill="url(#panel)" filter="url(#softShadow)"/>
+
+  <path d="M24 25V19C24 18.4477 24.4477 18 25 18H31" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M47 18H53C53.5523 18 54 18.4477 54 19V25" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M54 31V37C54 37.5523 53.5523 38 53 38H47" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M31 38H25C24.4477 38 24 37.5523 24 37V31" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 28H56" stroke="#EAF7FF" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="39" cy="28" r="5" fill="#FFFFFF"/>
+  <circle cx="39" cy="28" r="2.4" fill="#D84B4B"/>
+
+  <text x="68" y="25" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" letter-spacing="0.5">FastAD</text>
+  <text x="69" y="38" fill="#DDEEFF" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" letter-spacing="1.4">VISION QC</text>
+</svg>

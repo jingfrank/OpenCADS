@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 核心配色定义 - 参考 dataset.html */
+:root {
+    --bg-body: #BFCFDF;
+    /* 全局大背景：灰蓝色 */
+    --bg-card: #f0f5f9;
+    /* 三栏容器：淡淡的冰蓝色 */
+    --sidebar-dark: #28446B;
+    /* 侧边栏：深藏青 */
+    --topbar-dark: #28446B;
+    /* 顶部栏：深蓝 */
+    --primary-steel: #5c82a8;
+    /* 主色调：钢蓝 */
+    --success-muted: #52a58c;
+    /* 正常绿：莫兰迪绿 */
+    --danger-muted: #c35a5a;
+    /* 异常红：砖红 */
+    --border-soft: #cbd5e1;
+    /* 边框色 */
+    --text-main: #000000;
+    /* 主文字 */
+    --text-light: #000000;
+    /* 辅助文字 */
+}
+
+/* 全局基础样式 - 采用用户指定字体并实现更紧凑的间距 */
+body {
+    font-family: "Source Han Sans SC", "Source Han Sans CN", "Noto Sans SC", "思源黑体", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    /* 全局基础字体略微缩小增加紧凑感 */
+    line-height: 1.4;
+}
+
+/* 统一三栏背景 */
+.column-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 2px;
+}
+
+/* 按钮样式扩展 - 更紧凑的按钮 */
+.btn {
+    border-radius: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 2px 6px;
+    /* 减小内边距 */
+    transition: 0.15s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-steel {
+    background-color: var(--primary-steel);
+    color: white;
+}
+
+.btn-green {
+    background-color: var(--success-muted);
+    color: white;
+}
+
+.btn-red {
+    background-color: var(--danger-muted);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid var(--border-soft);
+    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--text-main);
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* 图像网格 - 将间距减至更密集的水平 */
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 8px;
+    /* 间距从12px缩减至8px */
+}
+
+.img-item {
+    border: 1px solid var(--border-soft);
+    padding: 2px;
+    /* 内边距从4px缩减至2px */
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+    cursor: pointer;
+}
+
+.img-item.active {
+    border: 2px solid var(--primary-steel);
+    background: rgba(92, 130, 168, 0.1);
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #adb5bd;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 布局间距压缩标记类 */
+.compact-p {
+    padding: 8px !important;
+}
+
+.compact-m {
+    margin: 8px !important;
+}
+
+/* 平滑过渡 */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

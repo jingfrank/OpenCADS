@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend
+    container_name: cads-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./backend/uploads:/app/uploads
+      - ./backend/models:/app/models
+      - ./backend/datasets:/app/datasets
+    environment:
+      - DATABASE_URL=sqlite:///./ads.db
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: cads-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: always

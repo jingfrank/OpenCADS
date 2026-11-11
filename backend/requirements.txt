@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+python-multipart
+torch
+torchvision
+numpy
+pillow
+scikit-learn
+faiss-cpu
+matplotlib
+timm
+tqdm
+scipy
+sqlmodel
+psycopg2-binary
+celery
+redis
